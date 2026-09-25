@@ -1,6 +1,6 @@
 # PROJECT_REPORT.md — Executive Market-Entry Strategy
-## For: Bruce Haryali, Chief — AtliQ Motors India
-## Prepared by: Peter Pandey, Lead Data Analyst
+## For: AtliQ Motors India
+## Prepared by: Anshul, Lead Data Analyst
 
 ---
 
