@@ -233,4 +233,3 @@ python scripts/compute_analytical_queries.py
 **Built by :**
 - [Anshul](https://github.com/morid648) 
 - [LinkedIn](https://www.linkedin.com/in/anshul-chaudhary-508138308/)
-- 
