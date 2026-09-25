@@ -1,11 +1,11 @@
 # AtliQ Motors — India Electric Vehicle Market-Entry Strategy & Analytics
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Anshul_Chaudhary-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anshul-chaudhary-508138308/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://github.com/your-username/atliq-motors-ev-insights/blob/main/sql/schema.sql)
-[![Power BI](https://img.shields.io/badge/Power_BI-Desktop-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://github.com/your-username/atliq-motors-ev-insights/blob/main/dax/measures.dax)
-[![DAX](https://img.shields.io/badge/DAX-Calculation_Engine-0078D4?style=for-the-badge&logoColor=white)](https://github.com/your-username/atliq-motors-ev-insights/blob/main/dax/measures.dax)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/your-username/atliq-motors-ev-insights/blob/main/scripts/ingest_to_postgres.py)
-[![Status](https://img.shields.io/badge/Status-Completed_%26_Validated-success?style=for-the-badge)](https://github.com/your-username/atliq-motors-ev-insights/blob/main/docs/RESULTS.md)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://github.com/morid648/atliq-motors-ev-insights/blob/main/sql/schema.sql)
+[![Power BI](https://img.shields.io/badge/Power_BI-Desktop-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://github.com/morid648/atliq-motors-ev-insights/blob/main/dax/measures.dax)
+[![DAX](https://img.shields.io/badge/DAX-Calculation_Engine-0078D4?style=for-the-badge&logoColor=white)](https://github.com/morid648/atliq-motors-ev-insights/blob/main/dax/measures.dax)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/morid648/atliq-motors-ev-insights/blob/main/scripts/ingest_to_postgres.py)
+[![Status](https://img.shields.io/badge/Status-Completed_%26_Validated-success?style=for-the-badge)](https://github.com/morid648/atliq-motors-ev-insights/blob/main/docs/RESULTS.md)
 
 ---
 
@@ -195,7 +195,7 @@ CALCULATE(
 
 ### 1. Clone & Set Up Database
 ```bash
-git clone https://github.com/your-username/atliq-motors-ev-insights.git
+git clone https://github.com/morid648/atliq-motors-ev-insights.git
 cd atliq-motors-ev-insights
 ```
 
@@ -228,3 +228,4 @@ python scripts/compute_analytical_queries.py
 
 ---
 *Created as part of the Codebasics Data Analytics Project Challenge.*
+
