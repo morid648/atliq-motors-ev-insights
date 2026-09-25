@@ -1,0 +1,29 @@
+# =============================================================================
+# Git Ignore: atliq-motors-insights
+# Prevents redistribution of proprietary raw datasets per rules.md §2
+# =============================================================================
+
+# Raw dataset files (codebasics.io terms prohibit distribution)
+datasets/*.csv
+*.csv
+
+# Python caches and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Database and log artifacts
+*.log
+*.sqlite
+*.db
+
+# Operating System and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
