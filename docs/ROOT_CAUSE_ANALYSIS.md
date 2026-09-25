@@ -1,6 +1,6 @@
 # ROOT_CAUSE_ANALYSIS.md — Engineering & Analytical RCA
 ## AtliQ Motors India EV Insights Project
-> **Author:** Peter Pandey, Lead Data Analyst  
+> **Author:** Anshul, Lead Data Analyst  
 > **Target Audience:** Engineering Leads, BI Developers, Quality Assurance, and Leadership  
 > **Scope:** Deep-dive Root Cause Analyses (RCA) on data pipeline defects, UI filter discrepancies, macroeconomic policy anomalies, and seasonality dynamics.
 
