@@ -229,3 +229,8 @@ python scripts/compute_analytical_queries.py
 ---
 *Created as part of the Codebasics Data Analytics Project Challenge.*
 
+---
+**Built by :**
+- [Anshul](https://github.com/morid648) 
+- [LinkedIn](https://www.linkedin.com/in/anshul-chaudhary-508138308/)
+- 
