@@ -7,6 +7,8 @@
 
 The AtliQ Motors India EV Insights Dashboard is an interactive executive reporting application designed to explore automotive sales trends, EV penetration rates, and manufacturer market share across India.
 
+![Power BI Dashboard Walkthrough](../assets/AtliQ_Car_Services_gif.gif)
+
 ### Report Structure:
 1. **Home Page (Landing View):**
    - Brand landing page displaying AtliQ Motors identity, renewable energy hero visual, and direct navigation buttons (`Maker's Analysis >` and `State Analysis >`).

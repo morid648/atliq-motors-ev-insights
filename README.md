@@ -46,6 +46,9 @@ Unlike typical portfolio projects that directly ingest flat CSVs into BI tools, 
   - `dim_revenue` (Grain: `vehicle_category`, empirical average selling price)
 - **Zero Fact-to-Fact Relationships:** Clean 1-to-many filtering preventing ambiguous paths or split-grain calculation errors.
 
+### 3. Interactive Dashboard Preview
+![AtliQ Motors Power BI Dashboard Walkthrough](assets/AtliQ_Car_Services_gif.gif)
+
 ---
 
 ## 🛠 Critical Engineering Catches & Data Governance
@@ -53,7 +56,7 @@ Unlike typical portfolio projects that directly ingest flat CSVs into BI tools, 
 A core differentiator of this project is discovering and fixing upstream defects rather than blindly visualizing flawed data.
 
 ### 1. Defect D1 Rectification (Reference DAX Measure Bug)
-In the provided reference DAX specification file (`DAX_Measures_And_Calculated_Columns_AtliQ_Motors.xlsx`), the `2024 Revenue` measure contained a copy-paste error:
+In the provided reference DAX specification file ([`dax/DAX_Measures_And_Calculated_Columns_AtliQ_Motors.xlsx`](file:///g:/Data%20Analytics/19.Portfolio/atliq-motors-insights/dax/DAX_Measures_And_Calculated_Columns_AtliQ_Motors.xlsx)), the `2024 Revenue` measure contained a copy-paste error:
 ```dax
 -- AS SUPPLIED IN REFERENCE (Defective):
 2024 Revenue = CALCULATE(SUMX(...), dim_date[fiscal_year] = 2023)  -- BUG: Filtered on 2023!
@@ -64,7 +67,7 @@ In the provided reference DAX specification file (`DAX_Measures_And_Calculated_C
 Corrected the filter to `dim_date[fiscal_year] = 2024`. True revenue growth rate is **+55.31%** (from ₹14,398.78 Cr in FY23 to ₹22,362.07 Cr in FY24), preserving financial reporting integrity.
 
 ### 2. Discrepancy D2 Resolution (Filter-State Forensic Audit)
-- **Discrepancy:** The dashboard reference walkthrough displayed Top 3 Makers as *OLA (475K), TVS (263K), Ather (184K)*, which differed from both single-year FY24 numbers and all-time totals.
+- **Discrepancy:** The dashboard reference walkthrough ([`assets/AtliQ_Car_Services_gif.gif`](file:///g:/Data%20Analytics/19.Portfolio/atliq-motors-insights/assets/AtliQ_Car_Services_gif.gif)) displayed Top 3 Makers as *OLA (475K), TVS (263K), Ather (184K)*, which differed from both single-year FY24 numbers and all-time totals.
 - **Root-Cause Discovery:** Recomputation proved that the visual was captured with a multi-select slicer state covering **FY2023 + FY2024 combined** (OLA: 152,583 + 322,489 = **475,072**; TVS: 82,093 + 180,743 = **262,836**; Ather: 76,921 + 107,552 = **184,473**).
 - **Resolution:** Provided complete audit transparency by reporting exact single-year benchmarks for question **P1** while explaining the multi-year UI filter state.
 
@@ -168,12 +171,18 @@ CALCULATE(
 
 ```
 ├── README.md                            <- Executive overview, pipeline, findings, recommendations (You are here)
+├── assets/
+│   └── AtliQ_Car_Services_gif.gif       <- Power BI interactive dashboard walkthrough animation
+├── presentation/
+│   ├── AtliQ_Motors_India_EV_Strategy.pptx <- Executive briefing slide deck
+│   └── AtliQ_Motors_Supplement_ppt.pptx    <- Technical supplement & modeling diagrams
 ├── sql/
 │   ├── schema.sql                       <- PostgreSQL DDL scripts with PK/FK constraints & indexes
 │   ├── seed_data.sql                    <- Sanitized SQL data insertion script
 │   └── integrity_checks.sql             <- SQL assertion & test suite
 ├── dax/
-│   └── measures.dax                     <- Production DAX calculation library (24+ verified measures)
+│   ├── measures.dax                     <- Production DAX calculation library (24+ verified measures)
+│   └── DAX_Measures_And_Calculated_Columns_AtliQ_Motors.xlsx <- Reference measures & formula specifications
 ├── scripts/
 │   ├── ingest_to_postgres.py            <- Automated ETL pipeline (CSV ➔ PostgreSQL)
 │   ├── compute_analytical_queries.py    <- Python ground-truth analytics engine (P1–P10)
@@ -183,9 +192,10 @@ CALCULATE(
 │   ├── ROOT_CAUSE_ANALYSIS.md           <- In-depth technical & macroeconomic Root Cause Analyses (RCA)
 │   ├── ANALYSIS.md                      <- Technical deep dive into data modeling, grain, and queries
 │   ├── PROJECT_REPORT.md                <- Executive briefing & strategic market-entry playbook for leadership
-│   └── END_USER_GUIDE.md                <- Dashboard navigation manual, filter guide, and UI specifications
+│   ├── END_USER_GUIDE.md                <- Dashboard navigation manual, filter guide, and UI specifications
+│   └── primary_and_secondary_questions.pdf <- Official 16-question research requirement brief
 ├── datasets/                            <- Raw source CSVs (dim_date, makers_sales, state_sales)
-├── meta_data.txt                        <- Column definitions & dataset schema notes
+│   └── meta_data.txt                    <- Column definitions & dataset schema notes
 └── .gitignore                           <- Git hygiene and data security rules
 ```
 

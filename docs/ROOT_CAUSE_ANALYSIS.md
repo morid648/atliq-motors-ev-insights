@@ -28,7 +28,7 @@ When calculating the revenue growth between FY2023 and FY2024 to answer primary 
 2. **Why was `[2024 Revenue]` equal to `[2023 Revenue]`?**  
    Both measures returned the exact same value of ₹14,398.78 Crores.
 3. **Why did `[2024 Revenue]` return FY2023 revenue?**  
-   The measure definition in `DAX_Measures_And_Calculated_Columns_AtliQ_Motors.xlsx` had the filter argument hardcoded to `dim_date[fiscal_year] = 2023`.
+   The measure definition in [`dax/DAX_Measures_And_Calculated_Columns_AtliQ_Motors.xlsx`](file:///g:/Data%20Analytics/19.Portfolio/atliq-motors-insights/dax/DAX_Measures_And_Calculated_Columns_AtliQ_Motors.xlsx) had the filter argument hardcoded to `dim_date[fiscal_year] = 2023`.
 4. **Why was `fiscal_year = 2023` present in `2024 Revenue`?**  
    A copy-paste error occurred during initial metric drafting: `2023 Revenue` was duplicated to create `2024 Revenue`, the measure title was updated, but the internal filter context was never modified.
 5. **Why was this critical?**  
@@ -74,7 +74,7 @@ CALCULATE(
 ## 🔍 Incident RCA-02: Dashboard Walkthrough Filter-State Discrepancy (D2)
 
 ### 1. Problem Statement & Symptom
-In the reference dashboard walkthrough GIF (`AtliQ_Car_Services_gif.gif`), the "Top 3 Makers" visual displayed:
+In the reference dashboard walkthrough GIF ([`assets/AtliQ_Car_Services_gif.gif`](file:///g:/Data%20Analytics/19.Portfolio/atliq-motors-insights/assets/AtliQ_Car_Services_gif.gif)), the "Top 3 Makers" visual displayed:
 - `OLA ELECTRIC`: **475K**
 - `TVS`: **263K**
 - `ATHER`: **184K**
