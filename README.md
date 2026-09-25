@@ -192,8 +192,7 @@ CALCULATE(
 │   ├── ROOT_CAUSE_ANALYSIS.md           <- In-depth technical & macroeconomic Root Cause Analyses (RCA)
 │   ├── ANALYSIS.md                      <- Technical deep dive into data modeling, grain, and queries
 │   ├── PROJECT_REPORT.md                <- Executive briefing & strategic market-entry playbook for leadership
-│   ├── END_USER_GUIDE.md                <- Dashboard navigation manual, filter guide, and UI specifications
-│   └── primary_and_secondary_questions.pdf <- Official 16-question research requirement brief
+│   └── END_USER_GUIDE.md                <- Dashboard navigation manual, filter guide, and UI specifications
 ├── datasets/                            <- Raw source CSVs (dim_date, makers_sales, state_sales)
 │   └── meta_data.txt                    <- Column definitions & dataset schema notes
 └── .gitignore                           <- Git hygiene and data security rules
